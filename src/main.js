@@ -1,6 +1,6 @@
-import Sort from './view/sort.js';
+import SortView from './view/sort-view.js';
 import {render} from './render.js';
 
 const $tripEevents = document.querySelector('.trip-events');
 
-render(new Sort(), $tripEevents);
+render(new SortView(), $tripEevents);
