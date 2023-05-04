@@ -20,7 +20,7 @@ export default class ListViewPresenter {
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
 
-    for( let i=0; i<3; i++ ) {
+    for(let i = 0; i < 3; i++) {
       render(new TripPointView(), this.listContainer.getElement());
     }
   }
