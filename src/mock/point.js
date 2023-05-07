@@ -87,3 +87,9 @@ const mockPoints = [
     "offers": getRandomArrayElement(OFFERS),
   }
 ];
+
+function getRandomPoint() {
+  return getRandomArrayElement(mockTasks);
+}
+
+export {getRandomPoint};
