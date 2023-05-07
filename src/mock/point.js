@@ -89,7 +89,7 @@ const mockPoints = [
 ];
 
 function getRandomPoint() {
-  return getRandomArrayElement(mockTasks);
+  return getRandomArrayElement(mockPoints);
 }
 
 export {getRandomPoint};
