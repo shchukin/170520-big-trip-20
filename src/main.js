@@ -1,6 +1,6 @@
 import ListViewPresenter from './presenters/list-view-presenter.js';
 
-const tripEeventsElement = document.querySelector('.trip-events');
+const tripEventsElement = document.querySelector('.trip-events');
 
-const listViewPresenter = new ListViewPresenter(tripEeventsElement);
+const listViewPresenter = new ListViewPresenter(tripEventsElement);
 listViewPresenter.init();
