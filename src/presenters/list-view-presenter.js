@@ -1,8 +1,8 @@
-import SortView from'../view/sort-view.js';
-import ListView from'../view/list-view.js';
-import TripPointView from'../view/trip-point-view';
-import EventEditView from'../view/event-edit-view';
-import EventAddView from'../view/event-add-view';
+import SortView from '../view/sort-view.js';
+import ListView from '../view/list-view.js';
+import TripPointView from '../view/trip-point-view';
+import EventEditView from '../view/event-edit-view';
+import EventAddView from '../view/event-add-view';
 
 import {render} from '../render.js';
 
