@@ -7,6 +7,8 @@ import EventAddView from '../view/event-add-view';
 import {render} from '../render.js';
 import ListModel from "../model/list-model";
 
+const route = new ListModel();
+
 export default class ListViewPresenter {
 
   listContainer = new ListView();
@@ -20,8 +22,6 @@ export default class ListViewPresenter {
     render(this.listContainer, this.container);
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
-
-    const route = new ListModel();
 
     for(let i = 0; i < route.points.length; i++) {
       render(new PointView(route.points[i]), this.listContainer.getElement());
