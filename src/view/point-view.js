@@ -2,23 +2,30 @@ import {createElement} from '../render.js';
 
 function createPointTemplate(point) {
 
-  const {startdate, type, title, price} = point;
+  const {
+    'start-date': startDate,
+    'end-date': endDate,
+    type,
+    title,
+    price,
+    offers
+  } = point;
 
   return (`
     <li class="trip-events__item">
       <div class="event">
-        <time class="event__date" datetime="${startdate.toISOString().split('T')[0]}">${startdate.toLocaleString('default', {month: 'short', day: 'numeric'})}</time>
+        <time class="event__date" datetime="${startDate.toISOString().split('T')[0]}">${startDate.toLocaleString('default', {month: 'short', day: 'numeric'})}</time>
         <div class="event__type">
           <img class="event__type-icon" width="42" height="42" src="img/icons/${type}.png" alt="Event type icon">
         </div>
         <h3 class="event__title">${title}</h3>
         <div class="event__schedule">
           <p class="event__time">
-            <time class="event__start-time" datetime="2019-03-18T10:30">10:30</time>
+            <time class="event__start-time" datetime="2019-03-18T10:30">${startDate.toLocaleTimeString('default', {hourCycle: 'h23', hour: '2-digit', minute: '2-digit'})}</time>
             —
-            <time class="event__end-time" datetime="2019-03-18T11:00">11:00</time>
+            <time class="event__end-time" datetime="2019-03-18T11:00">${endDate.toLocaleTimeString('default', {hourCycle: 'h23', hour: '2-digit', minute: '2-digit'})}</time>
           </p>
-          <p class="event__duration">30M</p>
+          <p class="event__duration">${Math.floor((endDate - startDate) / (1000 * 60)) + 'M'}</p>
         </div>
         <p class="event__price">
           €&nbsp;<span class="event__price-value">${price}</span>
@@ -26,6 +33,7 @@ function createPointTemplate(point) {
         <h4 class="visually-hidden">Offers:</h4>
         <ul class="event__selected-offers">
           <li class="event__offer">
+
             <span class="event__offer-title">Order Uber</span>
             +€&nbsp;
             <span class="event__offer-price">20</span>
