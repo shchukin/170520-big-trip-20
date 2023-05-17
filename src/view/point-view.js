@@ -2,14 +2,14 @@ import {createElement} from '../render.js';
 
 function createPointTemplate(point) {
 
-  const {title, price} = point;
+  const {startdate, type, title, price} = point;
 
   return (`
     <li class="trip-events__item">
       <div class="event">
-        <time class="event__date" datetime="2019-03-18">MAR 18</time>
+        <time class="event__date" datetime="${startdate.toISOString().split('T')[0]}">${startdate.toLocaleString('default', {month: 'short', day: 'numeric'})}</time>
         <div class="event__type">
-          <img class="event__type-icon" width="42" height="42" src="img/icons/taxi.png" alt="Event type icon">
+          <img class="event__type-icon" width="42" height="42" src="img/icons/${type}.png" alt="Event type icon">
         </div>
         <h3 class="event__title">${title}</h3>
         <div class="event__schedule">

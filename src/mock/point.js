@@ -5,7 +5,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-18'),
+    "startdate": new Date('2024-03-18'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-18'),
     "end-time": '18:00',
@@ -17,7 +17,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-18'),
+    "startdate": new Date('2024-03-18'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-18'),
     "end-time": '18:00',
@@ -29,7 +29,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-19'),
+    "startdate": new Date('2024-03-19'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-19'),
     "end-time": '18:00',
@@ -41,7 +41,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-19'),
+    "startdate": new Date('2024-03-19'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-19'),
     "end-time": '18:00',
@@ -53,7 +53,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-19'),
+    "startdate": new Date('2024-03-19'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-19'),
     "end-time": '18:00',
@@ -65,7 +65,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-20'),
+    "startdate": new Date('2024-03-20'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-20'),
     "end-time": '18:00',
@@ -77,7 +77,7 @@ const mockPoints = [
   {
     "destination": getRandomArrayElement(DESTINATIONS),
     "type": getRandomArrayElement(TYPES),
-    "start-date": new Date('2024-03-20'),
+    "startdate": new Date('2024-03-20'),
     "start-time": '16:00',
     "end-date": new Date('2024-03-20'),
     "end-time": '18:00',
