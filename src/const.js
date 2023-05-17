@@ -1,13 +1,13 @@
 const TYPES = [
-  'taxi',
   'bus',
-  'train',
-  'ship',
+  'check-in',
   'drive',
   'flight',
-  'check-in',
+  'restaurant',
+  'ship',
   'sightseeing',
-  'restaurant'
+  'taxi',
+  'train'
 ];
 
 const OFFERS = [
