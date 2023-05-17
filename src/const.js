@@ -36,11 +36,13 @@ const OFFERS = [
 const DESTINATIONS = [
   {
     'name': 'Chamonix',
-    'description': 'Chamonix-Mont-Blanc (usually shortened to Chamonix) is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, itʼs renowned for its skiing.'
+    'description': 'Chamonix-Mont-Blanc (usually shortened to Chamonix) is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, itʼs renowned for its skiing.',
+    'photo': ['1.jpg', '2.jpg']
   },
   {
     'name': 'Geneva',
-    'description': 'Chamonix-Mont-Blanc (usually shortened to Chamonix) is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, itʼs renowned for its skiing.'
+    'description': 'Chamonix-Mont-Blanc (usually shortened to Chamonix) is a resort area near the junction of France, Switzerland and Italy. At the base of Mont Blanc, the highest summit in the Alps, itʼs renowned for its skiing.',
+    'photo': ['3.jpg', '4.jpg', '5.jpg']
   }
 ]
 
