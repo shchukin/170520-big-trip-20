@@ -1,6 +1,6 @@
 import SortView from '../view/sort-view.js';
 import ListView from '../view/list-view.js';
-import TripPointView from '../view/trip-point-view';
+import PointView from '../view/point-view';
 import EventEditView from '../view/event-edit-view';
 import EventAddView from '../view/event-add-view';
 
@@ -24,7 +24,7 @@ export default class ListViewPresenter {
     render(new EventAddView(), this.listContainer.getElement());
 
     for(let i = 0; i < 3; i++) {
-      render(new TripPointView(
+      render(new PointView(
         {
         "end-time": '18:00',
         "title": 'Taxi Amsterdam',
