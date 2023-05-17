@@ -9,7 +9,8 @@ const mockPoints = [
     "end-date": new Date('2024-03-18T11:00'),
     "title": 'Taxi Amsterdam',
     "price": 20,
-    "offers": getRandomArrayElement(OFFERS)
+    "offers": getRandomArrayElement(OFFERS),
+    "favorite": true
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -19,6 +20,7 @@ const mockPoints = [
     "title": 'Flight Chamonix',
     "price": 160,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": false
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -28,6 +30,7 @@ const mockPoints = [
     "title": 'Drive Chamonix',
     "price": 160,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": true
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -37,6 +40,7 @@ const mockPoints = [
     "title": 'Check-in Chamonix',
     "price": 600,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": true
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -46,6 +50,7 @@ const mockPoints = [
     "title": 'Sightseeing Chamonix',
     "price": 50,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": false
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -55,6 +60,7 @@ const mockPoints = [
     "title": 'Drive Geneva',
     "price": 20,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": false
   },
   {
     "destination": getRandomArrayElement(DESTINATIONS),
@@ -64,6 +70,7 @@ const mockPoints = [
     "title": 'Flight Geneva',
     "price": 20,
     "offers": getRandomArrayElement(OFFERS),
+    "favorite": false
   }
 ];
 
