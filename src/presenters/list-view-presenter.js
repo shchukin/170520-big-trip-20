@@ -5,6 +5,7 @@ import EventEditView from '../view/event-edit-view';
 import EventAddView from '../view/event-add-view';
 
 import {render} from '../render.js';
+import ListModel from "../model/list-model";
 
 export default class ListViewPresenter {
 
@@ -21,7 +22,7 @@ export default class ListViewPresenter {
     render(new EventAddView(), this.listContainer.getElement());
 
     for(let i = 0; i < 3; i++) {
-      render(new TripPointView(), this.listContainer.getElement());
+      render(new TripPointView('Lorem Ipsum'), this.listContainer.getElement());
     }
   }
 
