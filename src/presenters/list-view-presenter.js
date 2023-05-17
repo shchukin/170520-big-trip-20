@@ -23,15 +23,10 @@ export default class ListViewPresenter {
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
 
-    for(let i = 0; i < 3; i++) {
-      render(new PointView(
-        {
-        "end-time": '18:00',
-        "title": 'Taxi Amsterdam',
-        "time": '16:00 ',
-        "price": 20,
-      }
-      ), this.listContainer.getElement());
+    const route = new ListModel();
+
+    for(let i = 0; i < route.points.length; i++) {
+      render(new PointView(route.points[i]), this.listContainer.getElement());
     }
   }
 
