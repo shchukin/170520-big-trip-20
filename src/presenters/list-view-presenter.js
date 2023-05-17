@@ -6,8 +6,6 @@ import EventAddView from '../view/event-add-view';
 
 import {render} from '../render.js';
 import ListModel from "../model/list-model";
-import {getRandomArrayElement} from "../utils";
-import {DESTINATIONS, OFFERS, TYPES} from "../const";
 
 export default class ListViewPresenter {
 
