@@ -2,7 +2,7 @@ import {createElement} from '../render.js';
 
 function createTripPointTemplate(point) {
 
-  const title  = point.title;
+  const {title, price}  = point;
 
   return (`
     <li class="trip-events__item">
@@ -21,7 +21,7 @@ function createTripPointTemplate(point) {
           <p class="event__duration">30M</p>
         </div>
         <p class="event__price">
-          €&nbsp;<span class="event__price-value">20</span>
+          €&nbsp;<span class="event__price-value">${price}</span>
         </p>
         <h4 class="visually-hidden">Offers:</h4>
         <ul class="event__selected-offers">
