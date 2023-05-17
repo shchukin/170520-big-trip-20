@@ -2,9 +2,7 @@ import {createElement} from '../render.js';
 
 function createTripPointTemplate(point) {
 
-  console.log(point);
-
-  const title  = point;
+  const title  = point.title;
 
   return (`
     <li class="trip-events__item">
