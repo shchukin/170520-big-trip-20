@@ -1,4 +1,4 @@
-import {mockPoints} from '../mock/point.js'
+import {mockPoints} from '../mock/points.js'
 
 
 const POINTS_COUNT = 7;
