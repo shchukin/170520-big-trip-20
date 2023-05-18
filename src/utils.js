@@ -22,14 +22,14 @@ const getFormattedPointDuration = (from, to) => {
   const diff = Math.abs(dayjs(from).diff(dayjs(to)));
 
   if (diff >= MSEC_IN_DAY) {
-    return dayjs.duration(diff).format('D[D] H[H]').replaceAll(' 0H', '');
+    return dayjs.duration(diff).format('DD[D] HH[H] mm[M]');
   }
 
   if (diff >= MSEC_IN_HOUR) {
-    return dayjs.duration(diff).format('H[H] m[M]').replaceAll(' 0M', '');
+    return dayjs.duration(diff).format('HH[H] mm[M]');
   }
 
-  return dayjs.duration(diff).format('m[M]');
+  return dayjs.duration(diff).format('mm[M]');
 }
 
 export {getFormattedPointDuration, getRandomArrayElement};
