@@ -29,9 +29,15 @@ export default class ListViewPresenter {
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
 
-    for(let i = 0; i < pointsModel.points.length; i++) {
-      render(new PointView(pointsModel.points[i]), this.listContainer.getElement());
-    }
+    pointsModel.points.forEach((point) => {
+      render(
+        new PointView({
+          point,
+          pointDestination: destinationsModel.getById(point.destination),
+          pointOffers: offersModel.getByType(point.type)
+        }),
+        this.listContainer.getElement()
+      )
+    });
   }
-
 }
