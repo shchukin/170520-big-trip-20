@@ -18,7 +18,7 @@ const HOUR_IN_DAY = 24;
 const MSEC_IN_HOUR = MIN_IN_HOUR * SEC_IN_MIN * MSEC_IN_SEC;
 const MSEC_IN_DAY = HOUR_IN_DAY * MSEC_IN_HOUR;
 
-const getPointDuration = (from, to) => {
+const getFormattedPointDuration = (from, to) => {
   const diff = Math.abs(dayjs(from).diff(dayjs(to)));
 
   if (diff >= MSEC_IN_DAY) {
@@ -32,4 +32,4 @@ const getPointDuration = (from, to) => {
   return dayjs.duration(diff).format('m[M]');
 }
 
-export {getPointDuration, getRandomArrayElement};
+export {getFormattedPointDuration, getRandomArrayElement};

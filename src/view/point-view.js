@@ -1,4 +1,4 @@
-import {getPointDuration} from '../utils.js';
+import {getFormattedPointDuration} from '../utils.js';
 import {createElement} from '../render.js';
 import dayjs from 'dayjs';
 
@@ -29,7 +29,7 @@ function createPointTemplate(point) {
             —
             <time class="event__end-time" datetime="2019-03-18T11:00">${dayjs(endDate).format('h:mm')}</time>
           </p>
-          <p class="event__duration">${getPointDuration(startDate, endDate)}</p>
+          <p class="event__duration">${getFormattedPointDuration(startDate, endDate)}</p>
         </div>
         <p class="event__price">
           €&nbsp;<span class="event__price-value">${price}</span>
