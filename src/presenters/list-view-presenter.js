@@ -5,9 +5,15 @@ import EventEditView from '../view/event-edit-view';
 import EventAddView from '../view/event-add-view';
 
 import {render} from '../render.js';
-import ListModel from "../model/list-model";
 
-const route = new ListModel();
+import DestinationsModel from "../model/destinations-model";
+import OffersModel from "../model/offers-model";
+import PointsModel from "../model/points-model";
+
+const destinationsModel = new DestinationsModel();
+const offersModel = new OffersModel();
+const pointsModel = new PointsModel();
+
 
 export default class ListViewPresenter {
 
@@ -23,8 +29,8 @@ export default class ListViewPresenter {
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
 
-    for(let i = 0; i < route.points.length; i++) {
-      render(new PointView(route.points[i]), this.listContainer.getElement());
+    for(let i = 0; i < pointsModel.points.length; i++) {
+      render(new PointView(pointsModel.points[i]), this.listContainer.getElement());
     }
   }
 

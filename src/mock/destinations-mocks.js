@@ -1,4 +1,4 @@
-const mockDestinations = [
+const destinationsMocks = [
   {
     "id": "756e1f80-53af-47a0-b439-0013ec872394",
     "description": "Rome - in a middle of Europe",
@@ -80,4 +80,4 @@ const mockDestinations = [
   }
 ];
 
-export {mockDestinations};
+export {destinationsMocks};

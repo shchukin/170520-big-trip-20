@@ -1,4 +1,4 @@
-const mockPoints = [
+const pointsMocks = [
   {
     "id": "4668b928-cb76-4a9d-b75b-b87d23fab559",
     "base_price": 4576,
@@ -320,4 +320,4 @@ const mockPoints = [
   }
 ];
 
-export {mockPoints};
+export {pointsMocks};
