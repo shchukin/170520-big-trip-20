@@ -1,4 +1,7 @@
+import {getPointDuration} from '../utils.js';
 import {createElement} from '../render.js';
+import dayjs from 'dayjs';
+
 
 function createPointTemplate(point) {
 
@@ -15,18 +18,18 @@ function createPointTemplate(point) {
   return (`
     <li class="trip-events__item">
       <div class="event">
-        <time class="event__date" datetime="${startDate.toISOString().split('T')[0]}">${startDate.toLocaleString('default', {month: 'short', day: 'numeric'})}</time>
+        <time class="event__date" datetime="${dayjs(startDate).format('YYYY-MM-DD')}">${dayjs(startDate).format('MMM D')}</time>
         <div class="event__type">
           <img class="event__type-icon" width="42" height="42" src="img/icons/${type}.png" alt="Event type icon">
         </div>
         <h3 class="event__title">${title}</h3>
         <div class="event__schedule">
           <p class="event__time">
-            <time class="event__start-time" datetime="2019-03-18T10:30">${startDate.toLocaleTimeString('default', {hourCycle: 'h23', hour: '2-digit', minute: '2-digit'})}</time>
+            <time class="event__start-time" datetime="2019-03-18T10:30">${dayjs(startDate).format('h:mm')}</time>
             —
-            <time class="event__end-time" datetime="2019-03-18T11:00">${endDate.toLocaleTimeString('default', {hourCycle: 'h23', hour: '2-digit', minute: '2-digit'})}</time>
+            <time class="event__end-time" datetime="2019-03-18T11:00">${dayjs(endDate).format('h:mm')}</time>
           </p>
-          <p class="event__duration">${Math.floor((endDate - startDate) / (1000 * 60)) + 'M'}</p>
+          <p class="event__duration">${getPointDuration(startDate, endDate)}</p>
         </div>
         <p class="event__price">
           €&nbsp;<span class="event__price-value">${price}</span>
