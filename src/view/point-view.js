@@ -25,9 +25,9 @@ function createPointTemplate(point) {
         <h3 class="event__title">${title}</h3>
         <div class="event__schedule">
           <p class="event__time">
-            <time class="event__start-time" datetime="2019-03-18T10:30">${dayjs(startDate).format('h:mm')}</time>
+            <time class="event__start-time" datetime="${dayjs(startDate).format('YYYY-MM-DD[T]hh:mm')}">${dayjs(startDate).format('h:mm')}</time>
             —
-            <time class="event__end-time" datetime="2019-03-18T11:00">${dayjs(endDate).format('h:mm')}</time>
+            <time class="event__end-time" datetime="${dayjs(endDate).format('YYYY-MM-DD[T]hh:mm')}">${dayjs(endDate).format('h:mm')}</time>
           </p>
           <p class="event__duration">${getFormattedPointDuration(startDate, endDate)}</p>
         </div>
