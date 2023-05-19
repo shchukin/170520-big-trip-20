@@ -10,12 +10,12 @@ import DestinationsModel from "../model/destinations-model";
 import OffersModel from "../model/offers-model";
 import PointsModel from "../model/points-model";
 
-const destinationsModel = new DestinationsModel();
-const offersModel = new OffersModel();
-const pointsModel = new PointsModel();
-
 
 export default class ListPresenter {
+
+  destinationsModel = new DestinationsModel();
+  offersModel = new OffersModel();
+  pointsModel = new PointsModel();
 
   listContainer = new ListView();
 
@@ -29,12 +29,12 @@ export default class ListPresenter {
     render(new EventEditView(), this.listContainer.getElement());
     render(new EventAddView(), this.listContainer.getElement());
 
-    pointsModel.points.forEach((point) => {
+    this.pointsModel.points.forEach((point) => {
       render(
         new PointView({
           point,
-          pointDestination: destinationsModel.getById(point.destination),
-          pointOffers: offersModel.getByType(point.type)
+          pointDestination: this.destinationsModel.getById(point.destination),
+          pointOffers: this.offersModel.getByType(point.type)
         }),
         this.listContainer.getElement()
       )
