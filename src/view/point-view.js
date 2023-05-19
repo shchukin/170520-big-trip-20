@@ -4,8 +4,8 @@ import {createElement} from '../render.js';
 import dayjs from 'dayjs';
 
 
-const createTitle = (typeId, destination) => {
-  return TYPES.find((type) => type.id === typeId).title + ' ' + destination.name;
+const createTitle = (typeAlias, destination) => {
+  return TYPES.find((type) => type.alias === typeAlias).title + ' ' + destination.name;
 }
 
 const createOffers = (offers) => {
