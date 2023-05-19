@@ -1,6 +1,29 @@
+import {TYPES} from '../const.js';
 import {getFormattedPointDuration} from '../utils.js';
 import {createElement} from '../render.js';
 import dayjs from 'dayjs';
+
+
+const createTitle = (typeId, destination) => {
+  return TYPES.find((type) => type.id === typeId).title + ' ' + destination.name;
+}
+
+const createOffers = (offers) => {
+
+  let offersTemplate = ``;
+
+  offers.forEach((offer) => {
+    offersTemplate += `
+      <li class="event__offer">
+        <span class="event__offer-title">${offer.title}</span>
+        +€&nbsp;
+        <span class="event__offer-price">${offer.price}</span>
+      </li>
+    `;
+  });
+
+  return offersTemplate;
+}
 
 
 function createPointTemplate({point, pointDestination, pointOffers}) {
@@ -8,30 +31,11 @@ function createPointTemplate({point, pointDestination, pointOffers}) {
   const {
     'date_from': dateFrom,
     'date_to': dateTo,
-    title,
     'base_price': basePrice,
     'is_favorite': isFavorite,
     offers,
     type,
   } = point;
-
-  const createOffers = (offers) => {
-
-    let offersTemplate = ``;
-
-    offers.forEach((offer) => {
-      offersTemplate += `
-        <li class="event__offer">
-          <span class="event__offer-title">${offer.title}</span>
-          +€&nbsp;
-          <span class="event__offer-price">${offer.price}</span>
-        </li>
-      `;
-    });
-
-    return offersTemplate;
-  }
-
 
   return (`
     <li class="trip-events__item">
@@ -40,7 +44,7 @@ function createPointTemplate({point, pointDestination, pointOffers}) {
         <div class="event__type">
           <img class="event__type-icon" width="42" height="42" src="img/icons/${type}.png" alt="Event type icon">
         </div>
-        <h3 class="event__title">${title}</h3>
+        <h3 class="event__title">${createTitle(type, pointDestination)}</h3>
         <div class="event__schedule">
           <p class="event__time">
             <time class="event__start-time" datetime="${dayjs(dateFrom).format('YYYY-MM-DD[T]hh:mm')}">${dayjs(dateFrom).format('h:mm')}</time>
