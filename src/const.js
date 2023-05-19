@@ -17,7 +17,7 @@ const TYPES = [
   },
   {
     'alias' : 'restaurant',
-    'title': 'Dinning'
+    'title': 'Restaurant'
   },
   {
     'alias' : 'ship',
