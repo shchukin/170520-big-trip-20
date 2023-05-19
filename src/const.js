@@ -1,39 +1,39 @@
 const TYPES = [
   {
     'alias' : 'bus',
-    'title': 'Bus in'
+    'title': 'Bus'
   },
   {
     'alias' : 'check-in',
-    'title': 'Check-in in',
+    'title': 'Check-in',
   },
   {
     'alias' : 'drive',
-    'title': 'Drive to'
+    'title': 'Drive'
   },
   {
     'alias' : 'flight',
-    'title': 'Flight to'
+    'title': 'Flight'
   },
   {
     'alias' : 'restaurant',
-    'title': 'Dinning in'
+    'title': 'Dinning'
   },
   {
     'alias' : 'ship',
-    'title': 'Ship to'
+    'title': 'Ship'
   },
   {
     'alias' : 'sightseeing',
-    'title': 'Sightseeing in'
+    'title': 'Sightseeing'
   },
   {
     'alias' : 'taxi',
-    'title': 'Taxi in'
+    'title': 'Taxi'
   },
   {
     'alias' : 'train',
-    'title': 'Train to'
+    'title': 'Train'
   },
 ];
 
