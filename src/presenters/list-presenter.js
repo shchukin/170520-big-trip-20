@@ -15,7 +15,7 @@ const offersModel = new OffersModel();
 const pointsModel = new PointsModel();
 
 
-export default class ListViewPresenter {
+export default class ListPresenter {
 
   listContainer = new ListView();
 
